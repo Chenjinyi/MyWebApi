@@ -101,6 +101,7 @@ class KeysController extends Controller
                 }
                 $update = KeysModel::where('key', $request['key']);
                 if ($update->update(['status' => $request['status']])) {
+                    $this->KeyApiLog("IP:" . $request->ip() ."KEY:".$request['key']."Status:".$status."使用APP_KEY:" . $request['app_key'] . "进行UpdateKey操作");
                     return json_encode('Success');
                 } else {
                     $this->ErrorBack(9999);

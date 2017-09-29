@@ -24,3 +24,8 @@ Route::group(['prefix'=>'/key'],function (){
     Route::post('/DelKey','KeysController@DelKey');
     Route::post('/UpdateKey','KeysController@UpdateKey');
 });
+
+Route::group(['prefix'=>'/image'],function(){
+   Route::post('/Upload','ImageController@Upload');
+   Route::post('/NameFindImage','ImageController@NameFindImage');
+});

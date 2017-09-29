@@ -24,9 +24,19 @@ POST
 		key:
 		status:
 		
+	Image:
+	
+	http://url/api/image/Upload
+		app_key:
+		name:
+		image: file
+		
+	http://url/api/image/NameFindImage
+		app_key:
+		name:
 ```
 
-错误返回码
+Key错误返回码
 
 ```
      * KEY ERROR
@@ -47,6 +57,14 @@ POST
      * APP_KEY ERROR
      * 1011 = APP_KEY为空
      * 1012 = APP_KEY错误
+     
+     * 1021 Image为NULL
+     * 1022 Image错误
+     * 1023 Image不存在
+     *
+     * 1024 Name为NULL
+     * 1025 Name错误
+     *
 ```
 
 Key Status

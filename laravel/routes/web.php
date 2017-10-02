@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/','PostController@BackMessages');
-
-
+Route::get('/','IndexController@Index');

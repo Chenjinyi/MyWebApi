@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/','IndexController@Api');
+Route::get('/','IndexController@Api');
 
 Route::group(['prefix'=>'/key'],function (){
     Route::post('/IsTrue','KeysController@IsTrue');

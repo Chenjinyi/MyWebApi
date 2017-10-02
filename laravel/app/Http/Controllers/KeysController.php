@@ -146,6 +146,9 @@ class KeysController extends Controller
             if ($num >= 600) {
                 return $this->ErrorBack(1006);
             }
+            if ($num <= 0){
+                return $this->ErrorBack(1006);
+            }
             for ($i = 1; $i <= $num; $i++) {
                 $NewKey = strtoupper(md5(uniqid('F')));
                 KeysModel::create(

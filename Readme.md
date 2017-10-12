@@ -2,9 +2,9 @@
 
  基于laravel框架开发的个人网站api系统
 
+### 目前版本 Beta Version 0.1.6
 
-
-请求地址
+#### 请求地址
 
 ```
 POST
@@ -25,7 +25,6 @@ POST
 		status:
 		
 	Image:
-	
 	http://url/api/image/Upload
 		app_key:
 		name:
@@ -34,9 +33,13 @@ POST
 	http://url/api/image/NameFindImage
 		app_key:
 		name:
+		
+	AppKey
+	http://url/api/app/FindKey
+		app_key:
 ```
 
-Key错误返回码
+#### Key错误返回码
 
 ```
      * KEY ERROR
@@ -67,7 +70,7 @@ Key错误返回码
      *
 ```
 
-Key Status
+#### Key Status
 
 ```
 	* -1 已删除
@@ -79,11 +82,46 @@ Key Status
 	* 10 未知错误
 ```
 
-Image Status
+#### Image Status
 
 ```
 	* -1 已删除
 	* 0 正常
 	* 1 异常
+```
+
+#### 文件目录（功能部分实现）
+
+```
+app
+├── Http
+│   ├── Controllers
+│   │   ├── ApiLogController.php Log控制器
+│   │   ├── AppKeyController.php Appkey控制器
+│   │   ├── ErrorController.php 错误控制器
+│   │   ├── ImageController.php 图片控制器
+│   │   ├── IndexController.php 首页控制器
+│   │   ├── KeysController.php  Key控制器
+│   │   └── PostController.php Post控制器（待定）
+├── ActionModel.php 操作模型
+├── ApiLogModel.php	Log模型
+├── AppKeyModel.php	AppKey模型
+├── ImageModel.php	Image模型
+└── KeysModel.php	Key模型
+routes
+├── api.php API路由
+└── web.php 网站路由
+```
+
+#### 更新记录
+
+```
+0.1.0 KEY功能实现 
+0.1.1 Log功能实现
+0.1.2 Image功能实现
+0.1.3 轻微优化
+0.1.4 App_Key功能实现
+0.1.5 重做ErrorBack方法
+0.1.6 重做ApiLog方法
 ```
 

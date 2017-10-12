@@ -48,6 +48,7 @@ class ImageController extends Controller
 
         }
     }
+
     /***
      * @param Request $request
      * @return string
@@ -131,6 +132,10 @@ class ImageController extends Controller
         ], JSON_UNESCAPED_UNICODE);
     }
 
+    /**
+     * @param $APP_KEY
+     * @return bool
+     */
     public function AppKeyIsTrue($APP_KEY)//APP_KEY验证
     {
         if (empty($APP_KEY)) {
@@ -147,6 +152,7 @@ class ImageController extends Controller
         }
         return true;
     }
+
     /***
      * @param $content
      */

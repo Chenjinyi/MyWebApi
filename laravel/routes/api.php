@@ -31,3 +31,7 @@ Route::group(['prefix'=>'/image'],function(){
    Route::post('/Upload','ImageController@Upload');
    Route::post('/NameFindImage','ImageController@NameFindImage');
 });
+
+Route::group(['prefix'=>'app'],function(){
+    Route::post('FindKey','AppKeyController@FindKey');
+});

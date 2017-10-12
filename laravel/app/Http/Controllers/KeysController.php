@@ -235,7 +235,10 @@ class KeysController extends Controller
         ], JSON_UNESCAPED_UNICODE);
     }
 
-
+    /**
+     * @param $APP_KEY
+     * @return bool
+     */
     public function AppKeyIsTrue($APP_KEY)//APP_KEY验证
     {
         if (empty($APP_KEY)) {
